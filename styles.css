@@ -145,13 +145,10 @@ body {
   vertical-align: text-bottom;
 }
 
-.intro__icon path {
-  fill: var(--text-decoration-color);
-}
-
 .intro_text {
   color: var(--secondary-text-color);
-  text-align: justify;
+  text-align: center;
+  padding-inline: 40px;
 }
 
 .skills__header {
