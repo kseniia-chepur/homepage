@@ -155,7 +155,7 @@ body {
 
 /* #endregion */
 
-/* #region intro&skills-languages-projects */
+/* #region intro */
 .intro {
   display: flex;
   justify-content: start;
@@ -179,7 +179,9 @@ body {
   text-align: center;
   padding-inline: 40px;
 }
+/* #endregion */
 
+/* #region skills-languages-projects */
 .skills-languages-projects__content-wrapper {
   color: var(--secondary-text-color);
   display: flex;
@@ -202,7 +204,6 @@ body {
   text-decoration: none;
   color: var(--secondary-text-color);
 }
-
 /* #endregion */
 
 /* #region experience&additional_info */
@@ -247,12 +248,6 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
-}
-
-.experiences__company-position {
-  color: var(--secondary-text-color);
-  text-align: left;
-  margin-bottom: 10px;
 }
 
 .experiences__company-project-responsibilities {
