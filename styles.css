@@ -190,22 +190,27 @@ body {
   padding-inline: 40px;
 }
 
-.skills__header {
+.skills-languages__content-wrapper {
   color: var(--secondary-text-color);
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills__header, .languages__header {
   text-align: center;
   margin-bottom: 15px;
 }
 
 .skills__content {
-  color: var(--secondary-text-color);
   display: flex;
   justify-content: center;
   gap: 100px;
 }
 
-.skills__list {
-  list-style: square;
+.skills__list, .languages__list {
+  list-style: none;
 }
+
 /* #endregion */
 
 /* #region experience&additional_info */
