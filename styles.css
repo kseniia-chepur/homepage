@@ -196,9 +196,15 @@ body {
   margin-bottom: 15px;
 }
 
-.skills__text {
+.skills__content {
   color: var(--secondary-text-color);
-  text-align: justify;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.skills__list {
+  list-style: square;
 }
 /* #endregion */
 
