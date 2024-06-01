@@ -6,27 +6,28 @@
 }
   
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu Mono', monospace;
     line-height: 1.5;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   
     --primary-text-color: #181820;
     --secondary-text-color: #5c5c62;
-    --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --border-color: #c5dce2;
+    --text-decoration-color: #53a8b6; 
+    --accent-color: #345c72; 
 }
   
 .container {
     margin: 0 auto;
     padding: 0 30px;
-    max-width: 900px;
+    max-width: 950px;
 }
   
 .fh {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
 }
   
 .fv {
@@ -40,7 +41,7 @@ body {
     border: 1px solid #f5f5f5;
     box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
-    max-width: 900px;
+    max-width: 950px;
 }
   
 .resume__block {
@@ -52,35 +53,55 @@ body {
 @media screen and (max-width: 576px) {
     .main-info,
     .contact_info_container {
-      flex-direction: column;
+        flex-direction: column;
     }
   
     .contact_info_container {
-      align-items: center;
+        align-items: center;
     }
   
     .contact-info__block:not(:last-child) {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
     }
   
     .experiences {
-      margin-right: 0;
+        margin-right: 0;
     }
 }
   /* #endregion */
 
-/* #region contacts */
+/* #region contact-info */
 .contact-info__header,
 .contact-info__sub-header {
     text-align: center;
+    letter-spacing: 1px;
+}
+
+.contact-info__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-info__header {
-    color: var(--primary-text-color);
-    margin-bottom: 15px;
+    color: var(--secondary-text-color);
+    margin-bottom: 10px;
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
 }
+
+.contact-info__header::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 12%;
+    background-color: var(--text-decoration-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-info__header:hover::after {
+    width: 100%;
+}  
 
 .contact-info__sub-header {
     color: var(--secondary-text-color);
@@ -90,7 +111,8 @@ body {
 .contact-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-info__block--center {
@@ -102,11 +124,18 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: start;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact-info__item:not(:last-child) {
     margin-bottom: 20px;
 }
+
+.contact-info__item:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}  
 
 .contact-info__item-icon-wrapper {
     margin-right: 10px;
@@ -115,31 +144,18 @@ body {
     justify-content: center;
 }
 
-.contact-info__item-icon path {
-    fill: var(--icon-color);
-}
-
-.contact-info__item-icon {
-    height: 1.1428rem;
-    vertical-align: text-bottom;
-}
-
-.contact-info__avatar {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid;
-    border-color: var(--text-decoration-color);
+.contact-info__photo {
+    width: 150px;
+    height: 150px;
 }
 /* #endregion */
 
-/* #region into-skills */
+/* #region intro */
 .intro {
     display: flex;
     justify-content: start;
 }
-  
+
 .intro__icon-wrapper {
     margin-right: 30px;
     width: 30px;
@@ -150,121 +166,154 @@ body {
 .intro__icon {
     height: 1.1428rem;
     vertical-align: text-bottom;
-}
-
-.intro__icon path {
-    fill: var(--text-decoration-color);
+    color: var(--text-decoration-color);
 }
 
 .intro_text {
     color: var(--secondary-text-color);
-    text-align: justify;
-}
-
-.skills__header {
-    color: var(--secondary-text-color);
     text-align: center;
-    margin-bottom: 15px;
-}
-
-.skills__text {
-    color: var(--secondary-text-color);
-    text-align: justify;
+    padding-inline: 40px;
 }
 /* #endregion */
 
+/* #region skills-languages-projects */
+.skills-languages-projects__content-wrapper {
+    color: var(--secondary-text-color);
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; 
+}
+  
+.skills__header, .languages__header, .projects__header {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+  
+.skills__list, .languages__list, .projects__list {
+    list-style: none;
+    font-size: 14px;
+}
+
+.projects__item {
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.projects__link {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    display: block;
+    font-weight: 600;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.projects__link:hover {
+    opacity: 0.8;
+}
+
+.projects__description {
+    font-style: italic;
+}
+  /* #endregion */
+  
+
 /* #region experience_additional-info */
 .experiences {
-    flex: 1 1 60%;
-    margin-right: 50px;
+    flex: 1 1 50%;  
 }
   
 .experiences__header {
-    color: var(--secondary-text-color);
+    color: var(--accent-color);
     text-align: left;
     margin-bottom: 20px;
 }
   
 .experiences__company-header-durability {
-    color: var(--durability-text-color);
+    color: var(--secondary-text-color);
     text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
+     font-size: 14px;
+    font-weight: 700;
 }
   
 .experiences__company-header-name {
     color: var(--primary-text-color);
-    text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
     text-align: left;
     margin-bottom: 20px;
 }
   
+.experiences__company-header-name-area {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+}
+  
 .experiences__company-project {
-    margin-left: 15px;
-    margin-bottom: 25p
+    margin-bottom: 25px;
 }
   
 .experiences__company-project-role {
-    color: var(--durability-text-color);
+    color: var(--secondary-text-color);
     text-align: left;
     margin-bottom: 10px;
     font-size: 15px;
+    font-weight: 600;
 }
-
-.experiences__company-project-name {
-    color: var(--primary-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-}
-
+  
 .experiences__company-project-responsibilities {
     color: var(--secondary-text-color);
     padding-left: 20px;
 }
+  
+.experiences__responsibilies-list {
+    list-style: square;
+    padding-left: 20px;
+    font-size: 12px;
+    color: var(--secondary-text-color);
+}  
 
 .additional-info {
-    flex: 1 1 40%;
+    flex: 1 1 50%;
 }
   
 .additional-info__education {
     margin-bottom: 20px;
 }
+
+.additional-info__education-details {
+    margin-bottom: 20px;
+}  
   
 .additional-info__education-header {
-    color: var(--secondary-text-color);
+    color: var(--accent-color);
     text-align: left;
     margin-bottom: 20px;
 }
   
-.additional-info__education-university-durability {
-    color: var(--durability-text-color);
+.additional-info__education-course-details {
+    color: var(--secondary-text-color);
     text-align: left;
     margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+  
+.additional-info__education-list {
+    list-style: square;
+    padding-left: 20px;
+    font-size: 12px;
+    color: var(--secondary-text-color);
+}
+  
+.additional-info__education-establishment-name {
+    color: var(--secondary-text-color);
     font-size: 15px;
 }
   
-.additional-info__education-university-speciality {
-    color: var(--primary-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-}
-  
-.additional-info__education-university-name {
-    color: var(--secondary-text-color);
-}
-  
-.additional-info__languages {
-    margin-bottom: 20px;
-}
-  
-.additional-info__languages-header {
-    color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
-}
-  
-.additional-info__languages-item {
+.additional-info__education-link {
+    text-decoration: none;
     color: var(--secondary-text-color);
 }
 /* #endregion */
