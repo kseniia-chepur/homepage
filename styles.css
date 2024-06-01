@@ -274,47 +274,45 @@ body {
 }  
 
 .additional-info {
-    flex: 1 1 40%;
+    flex: 1 1 50%;
 }
   
 .additional-info__education {
     margin-bottom: 20px;
 }
+
+.additional-info__education-details {
+    margin-bottom: 20px;
+}  
   
 .additional-info__education-header {
-    color: var(--secondary-text-color);
+    color: var(--accent-color);
     text-align: left;
     margin-bottom: 20px;
 }
   
-.additional-info__education-university-durability {
-    color: var(--durability-text-color);
+.additional-info__education-course-details {
+    color: var(--secondary-text-color);
     text-align: left;
     margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+  
+.additional-info__education-list {
+    list-style: square;
+    padding-left: 20px;
+    font-size: 12px;
+    color: var(--secondary-text-color);
+}
+  
+.additional-info__education-establishment-name {
+    color: var(--secondary-text-color);
     font-size: 15px;
 }
   
-.additional-info__education-university-speciality {
-    color: var(--primary-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-}
-  
-.additional-info__education-university-name {
-    color: var(--secondary-text-color);
-}
-  
-.additional-info__languages {
-    margin-bottom: 20px;
-}
-  
-.additional-info__languages-header {
-    color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
-}
-  
-.additional-info__languages-item {
+.additional-info__education-link {
+    text-decoration: none;
     color: var(--secondary-text-color);
 }
 /* #endregion */
