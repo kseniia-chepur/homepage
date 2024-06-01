@@ -20,7 +20,7 @@ body {
 .container {
     margin: 0 auto;
     padding: 0 30px;
-    max-width: 900px;
+    max-width: 950px;
 }
   
 .fh {
@@ -52,19 +52,19 @@ body {
 @media screen and (max-width: 576px) {
     .main-info,
     .contact_info_container {
-      flex-direction: column;
+        flex-direction: column;
     }
   
     .contact_info_container {
-      align-items: center;
+        align-items: center;
     }
   
     .contact-info__block:not(:last-child) {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
     }
   
     .experiences {
-      margin-right: 0;
+        margin-right: 0;
     }
 }
   /* #endregion */
@@ -134,12 +134,12 @@ body {
 }
 /* #endregion */
 
-/* #region into-skills */
+/* #region intro */
 .intro {
     display: flex;
     justify-content: start;
 }
-  
+
 .intro__icon-wrapper {
     margin-right: 30px;
     width: 30px;
@@ -150,28 +150,57 @@ body {
 .intro__icon {
     height: 1.1428rem;
     vertical-align: text-bottom;
-}
-
-.intro__icon path {
-    fill: var(--text-decoration-color);
+    color: var(--text-decoration-color);
 }
 
 .intro_text {
     color: var(--secondary-text-color);
-    text-align: justify;
+    text-align: center;
+    padding-inline: 40px;
 }
+/* #endregion */
 
-.skills__header {
+/* #region skills-languages-projects */
+.skills-languages-projects__content-wrapper {
     color: var(--secondary-text-color);
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; 
+}
+  
+.skills__header, .languages__header, .projects__header {
+    color: var(--accent-color);
     text-align: center;
     margin-bottom: 15px;
 }
-
-.skills__text {
-    color: var(--secondary-text-color);
-    text-align: justify;
+  
+.skills__list, .languages__list, .projects__list {
+    list-style: none;
+    font-size: 14px;
 }
-/* #endregion */
+
+.projects__item {
+    margin-bottom: 10px;
+}
+  
+.projects__link {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    display: block;
+    font-weight: 600;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.projects__link:hover {
+    opacity: 0.8;
+}
+
+.projects__description {
+    font-style: italic;
+}
+  /* #endregion */
+  
 
 /* #region experience_additional-info */
 .experiences {
