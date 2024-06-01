@@ -11,10 +11,9 @@ body {
   
     --primary-text-color: #181820;
     --secondary-text-color: #5c5c62;
-    --durability-text-color: #6a737d9c;
-    --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --border-color: #c5dce2;
+    --text-decoration-color: #53a8b6; 
+    --accent-color: #345c72; 
 }
   
 .container {
@@ -181,6 +180,7 @@ body {
 
 .projects__item {
     margin-bottom: 10px;
+    text-align: center;
 }
   
 .projects__link {
