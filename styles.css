@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
 }
   
 .fv {
@@ -39,7 +40,7 @@ body {
     border: 1px solid #f5f5f5;
     box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
-    max-width: 900px;
+    max-width: 950px;
 }
   
 .resume__block {
@@ -68,18 +69,38 @@ body {
 }
   /* #endregion */
 
-/* #region contacts */
+/* #region contact-info */
 .contact-info__header,
 .contact-info__sub-header {
     text-align: center;
+    letter-spacing: 1px;
+}
+
+.contact-info__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-info__header {
-    color: var(--primary-text-color);
-    margin-bottom: 15px;
+    color: var(--secondary-text-color);
+    margin-bottom: 10px;
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
 }
+
+.contact-info__header::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 12%;
+    background-color: var(--text-decoration-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-info__header:hover::after {
+    width: 100%;
+}  
 
 .contact-info__sub-header {
     color: var(--secondary-text-color);
@@ -89,7 +110,8 @@ body {
 .contact-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;    
 }
 
 .contact-info__block--center {
@@ -101,11 +123,18 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: start;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact-info__item:not(:last-child) {
     margin-bottom: 20px;
 }
+
+.contact-info__item:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}  
 
 .contact-info__item-icon-wrapper {
     margin-right: 10px;
@@ -114,22 +143,9 @@ body {
     justify-content: center;
 }
 
-.contact-info__item-icon path {
-    fill: var(--icon-color);
-}
-
-.contact-info__item-icon {
-    height: 1.1428rem;
-    vertical-align: text-bottom;
-}
-
-.contact-info__avatar {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid;
-    border-color: var(--text-decoration-color);
+.contact-info__photo {
+    width: 150px;
+    height: 150px;
 }
 /* #endregion */
 
